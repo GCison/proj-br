@@ -21,7 +21,7 @@ function change_html(){
 
 function git_update(){
    local commando=$(~/cison/html/proj-br/temp.sh)
-   $commando}
+   $(commando)
     termux-toast -c green "Site atualizado"
 }
 
