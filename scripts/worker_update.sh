@@ -20,11 +20,8 @@ function change_html(){
 }
 
 function git_update(){
-    readonly local git_message="atualiza valor tag h1 projecao"
-    $(cd ..)
-    $(git add .)
-    $(git commit -m $git_message)
-    $(git push)
+    $(~/cison/html/proj-br/temp.sh)
 }
+
 
 main
