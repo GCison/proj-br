@@ -20,7 +20,7 @@ function change_html(){
 }
 
 function git_update(){
-    $(~/cison/html/proj-br/temp.sh)
+   local commando=$(~/cison/html/proj-br/temp.sh)
 }
 
 
