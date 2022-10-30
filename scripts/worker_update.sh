@@ -3,6 +3,7 @@
 function main(){
     change_html
     git_update
+    termux-toast -c green "Site atualizado"
 }
 
 function get_projecao(){
