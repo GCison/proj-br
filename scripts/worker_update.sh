@@ -14,15 +14,15 @@ function change_html(){
     readonly local _file=~/cison/html/proj-br/index.html
     readonly local _pattern='[0-9]\{2,\}'
     readonly local _value=$(get_projecao)
-    echo $_value
     readonly local _command_sed=$(sed -i 's/[0-9]\{2,\}/'"$_value"'/g' $_file)
 }
 
 function git_update(){
-    echo "oiiii"
-   local commando=$(~/cison/html/proj-br/temp.sh)
+    local commando=$(~/cison/html/proj-br/temp.sh)
     termux-toast -c green "Site atualizado"
 }
 
-
 main
+
+
+
