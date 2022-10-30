@@ -2,24 +2,24 @@
 
 function main(){
     change_html
-#    git_update
+    git_update
 }
 
 function get_projecao(){
-    readonly local execut=$(~/cison/html/proj-br/scripts/request_data.py)
-    readonly local _value=$(cat ~/cison/html/proj-br/data/data.txt)
+    readonly local _value=$(curl -X GET https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/BR | jq '.projecao.populacao')
     echo $_value
 }
 
 function change_html(){
     readonly local _file=~/cison/html/proj-br/index.html
-    readonly local _pattern="id=\"value.*h1>"
+    readonly local _pattern='[0-9]\{2,\}'
     readonly local _value=$(get_projecao)
-    readonly local _command_sed=$(sed -i "s/$_pattern/id=\"value\">$_value<\/h1>/g" $_file)
-    $_command_sed
+    echo $_value
+    readonly local _command_sed=$(sed -i 's/[0-9]\{2,\}/'"$_value"'/g' $_file)
 }
 
 function git_update(){
+    echo "oiiii"
    local commando=$(~/cison/html/proj-br/temp.sh)
     termux-toast -c green "Site atualizado"
 }
