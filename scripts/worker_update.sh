@@ -3,7 +3,6 @@
 function main(){
     change_html
     git_update
-    termux-toast -c green "Site atualizado"
 }
 
 function get_projecao(){
@@ -22,6 +21,8 @@ function change_html(){
 
 function git_update(){
    local commando=$(~/cison/html/proj-br/temp.sh)
+   $commando}
+    termux-toast -c green "Site atualizado"
 }
 
 
