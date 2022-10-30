@@ -2,7 +2,7 @@
 
 function main(){
     change_html
-#    git_update
+    git_update
 }
 
 function get_projecao(){
