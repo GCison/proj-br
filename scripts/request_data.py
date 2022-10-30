@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-from io import TextIOWrapper
 import json, requests
 
 def get_projecao_api_ibge():
@@ -9,10 +8,10 @@ def get_projecao_api_ibge():
     data = json.loads(text)
     projecao = data['projecao']
     result = projecao['populacao']
-    writer_data(str(f"{result:,.0f}"))
+#    writer_data(str(result))
 
 def writer_data(value):
-    arq = open('data/data.txt', 'w')
+    arq = open("~/cison/html/proj-br/data/data.txt", 'w')
     arq.write(value)
     arq.close()
 
