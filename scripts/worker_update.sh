@@ -18,7 +18,7 @@ function change_html(){
 }
 
 function git_update(){
-    cd ../
+    cd ~/cison/html/proj-br/
     git add .
     git commit -m "atualiza projecao"
     git push
