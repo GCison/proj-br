@@ -68,6 +68,6 @@ body{
 @media (max-width:768px){
     .container{
         padding:20px;
-        font-size: 2rem;
+        font-size: 4rem;
     }
 }
