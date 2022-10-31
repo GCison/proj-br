@@ -1,9 +1,10 @@
 from os import truncate
 import subprocess
 import time
+import os
 
 
 while True:
-    subprocess.run(['bash', "~/cison/html/proj-br/scripts/worker_update.sh"], timeout=10)
+    os.system("~/cison/html/proj-br/scripts/worker_update.sh")
     time.sleep(10)
 
