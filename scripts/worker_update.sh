@@ -18,7 +18,11 @@ function change_html(){
 }
 
 function git_update(){
-    local commando=$(~/cison/html/proj-br/temp.sh)
+    cd ../
+    git add .
+    git commit -m "atualiza projecao"
+    git push
+#    local commando=$(~/cison/html/proj-br/temp.sh)
     termux-toast -c green "Site atualizado"
 }
 
